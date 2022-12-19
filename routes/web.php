@@ -31,7 +31,11 @@ Auth::routes();
     //Route::get('/admin', [RoleController::class, 'index']);
     Route::get('/role', [RoleController::class, 'index']);
     Route::get('/permissions', [PermissionController::class, 'index']);
-    
+    Route::get('/create',[RoleController::class, 'create']);
+    Route::post('store', [RoleController::class, 'store']);
+    Route::get('/delete/{id}',[RoleController::class, 'create']);
+
+
 });
  
 

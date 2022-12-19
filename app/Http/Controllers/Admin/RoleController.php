@@ -16,6 +16,29 @@ class RoleController extends Controller
         return view('admin.role.index', compact('roles'));
     }
 
-    
+    public function create()
+    {
+        return view('admin.role.create');
+    }
+
+    public function store(Request $req)
+    {
+        $validate = $req->validate(['name'=>['required', 'min:3']]);
+        Role::create($validate );
+
+        //return view('admin.role.index');
+        return view('admin.role.create')->with('Success', 'New Role created Successfuly');
+    }
+
+    public function edit($id)
+    {
+        
+    }
+
+    public function delete($id)
+    {
+        print($id);
+        return redirect()->back('index');
+    }
 
 }

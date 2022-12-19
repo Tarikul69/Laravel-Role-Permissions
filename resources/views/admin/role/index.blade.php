@@ -14,7 +14,7 @@
                             <h2>Admin Role</h2>
                          </div>
                          <div class="container col">
-                            <td><a href="" class="btn btn-secondary" style="text-decoration:none;">New Role</a></td>
+                            <td><a href="/create" class="btn btn-secondary" style="text-decoration:none;">New Role</a></td>
                          </div>
                      </div>
                      <table class="table">
@@ -33,7 +33,7 @@
       <td>{{$r->name}}</td>
        <td>
           <a href="" class="btn btn-success " style="text-decoration:none;">Edit</a>
-          <a href="" class="btn btn-danger" style="text-decoration:none;">Delete</a>
+          <a href="{{url('delete/'.$r->id)}}" class="btn btn-danger" style="text-decoration:none;">Delete</a>
       </td>
     </tr>
     @endforeach
