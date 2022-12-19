@@ -20,7 +20,7 @@ class AdminRole extends Seeder
     public function run()
     {
          $user = User::create([
-            'name' => 'Admin',
+            'name' => 'admin',
             'email' =>  'admin@gmail.com',
             'email_verified_at' => now(),
             'password' => '$2y$10$IZSb7ylfSpv5OMl9FgpFNuic7LVTU8Uz5Jrjrla/Yc7wgbdhMuYsq', // password

@@ -29,9 +29,9 @@ class RoleController extends Controller
         //return view('admin.role.index');
         return view('admin.role.create')->with('Success', 'New Role created Successfuly');
     }
-    public function edit(Role $role, $id)
+    public function edit(Role $role, $name)
     {
-        $roles = Role::all();
+        $roles = Role::find($name);
         return view('admin.role.edit', compact('roles'));
     }
 
@@ -54,7 +54,7 @@ class RoleController extends Controller
     //////////Products///////////
     public function products()
     {
-        return view();
+        return view('admin.products.products');
     }
 
 }

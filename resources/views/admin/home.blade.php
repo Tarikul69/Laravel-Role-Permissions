@@ -10,18 +10,9 @@
                 <div class="card-body" style="align-items:center;">
                     <a class="btn btn-secondary" href="/role">Role</a><br>
                     <hr>
-                    <a class="btn btn-secondary" href="/permissions">Permission</a><br>
+                    <a class="btn btn-secondary" href="/products">View Products</a><br>
                     <hr>
-                    <!-- <a class="btn btn-secondary" href="">Edit Roles</a><br>
-                    <hr>
-                    <a class="btn btn-danger" href="">Delete Role</a><br>
-                    <hr> -->
-                    <a class="btn btn-secondary" href="">View Products</a><br>
-                    <hr>
-                    <a class="btn btn-secondary" href="">Edit Products</a><br>
-                    <hr>
-                    <a class="btn btn-danger" href="">Delete Products</a>
-
+                     
                 </div>
             </div>
         </div>

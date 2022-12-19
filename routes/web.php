@@ -34,9 +34,10 @@ Auth::routes();
     Route::get('/create',[RoleController::class, 'create']);
     Route::post('store', [RoleController::class, 'store']);
     Route::get('/delete/{id}',[RoleController::class, 'delete']);
-    Route::get('/edit/{id}',[RoleController::class, 'edit']);
+    Route::get('/edit/name',[RoleController::class, 'edit']);
     Route::post('/update',[RoleController::class, 'update']);
     Route::get('/products',[RoleController::class, 'products']);
+    
 
 });
  

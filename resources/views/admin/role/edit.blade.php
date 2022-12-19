@@ -18,7 +18,7 @@
                             <td><a href="/role" class="btn btn-secondary" style="text-decoration:none;">Role Index</a></td>
                          </div>
                      </div>
-                     <form method="POST" action="{{ route('/update'.$roles->id)}}" >
+                     <form method="POST" action="{{ route('update'.$roles->id)}}" >
                          @csrf
                          @method('PUT')
                         <div class="form-group">
