@@ -31,6 +31,7 @@ Auth::routes();
     //Route::get('/admin', [RoleController::class, 'index']);
     Route::get('/role', [RoleController::class, 'index']);
     Route::get('/permissions', [PermissionController::class, 'index']);
+    
 });
  
 
