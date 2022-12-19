@@ -32,7 +32,7 @@
       <th scope="row"></th>
       <td>{{$r->name}}</td>
        <td>
-          <a href="" class="btn btn-success " style="text-decoration:none;">Edit</a>
+          <a href="{{url('edit/'.$r->id)}}" class="btn btn-success " style="text-decoration:none;">Edit</a>
           <a href="{{url('delete/'.$r->id)}}" class="btn btn-danger" style="text-decoration:none;">Delete</a>
       </td>
     </tr>

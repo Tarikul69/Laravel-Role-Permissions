@@ -29,16 +29,32 @@ class RoleController extends Controller
         //return view('admin.role.index');
         return view('admin.role.create')->with('Success', 'New Role created Successfuly');
     }
-
-    public function edit($id)
+    public function edit(Role $role, $id)
     {
-        
+        $roles = Role::all();
+        return view('admin.role.edit', compact('roles'));
+    }
+
+    public function update(Request $req, Role $role)
+    {
+         $validate = $req->validate(['name'=> 'required']);
+         $role->update($validate);
+
+         return redirect()->back();
     }
 
     public function delete($id)
     {
-        print($id);
-        return redirect()->back('index');
+       $data =Role::find($id)->delete();
+       return  redirect()->back();
+    }
+
+
+
+    //////////Products///////////
+    public function products()
+    {
+        return view();
     }
 
 }
