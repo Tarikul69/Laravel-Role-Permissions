@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 
@@ -23,6 +24,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $data = DB::table('product')->get();
+        return view('users.home', compact('data'));
     }
+
+    public function home()
+    {
+       return view('admin.home');
+    }
+
 }

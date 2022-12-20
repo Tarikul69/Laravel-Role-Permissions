@@ -14,8 +14,9 @@
                  </div>
             </div>
             <div class="container">
-            <form>
+            <form action="/updateproduct" method="post">
                 @csrf
+               
                  <div class="form-group">
                     <label for="exampleInputEmail1">Name</label>
                     <input type="text" class="form-control"  name="name" placeholder="Add product name">

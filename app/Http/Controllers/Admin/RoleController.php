@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\product;
 use Hamcrest\Core\HasToString;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use lluminate\Database\Eloquent\Collection;
 use Spatie\Permission\Models\Role;
 
@@ -52,12 +54,45 @@ class RoleController extends Controller
     //////////Products///////////
     public function products()
     {
-        return view('admin.products.products');
+        $data = product::all();
+        return view('admin.products.products', compact('data'));
     }
 
-    public function addproduct()
+
+    public function addproduct(Request $req)
     {
         return view('admin.products.addproduct');
+    }
+
+    public function updateproduct(Request $req)
+    {
+        $req->validate([
+        'name' => 'required',
+        'price' => 'required',
+    ]);
+        DB::table('product')->insert([
+            'name'=>$req->input('name'),
+            'price'=>$req->input('price'),
+        ]);
+        return redirect()->back()->with("Good");
+       //return "good";
+    }
+
+    public function deleteproduct($id)
+    {
+       $data = product::find($id)->delete();
+       return  redirect()->back();
+    }
+
+    public function edit1()
+    {
+        return ;
+    }
+
+    public function editproduct($id)
+    {
+       $data = product::find($id);
+       return view('admin.products.edit', compact('data'));
     }
 
 }

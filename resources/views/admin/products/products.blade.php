@@ -27,15 +27,17 @@
     </tr>
   </thead>
   <tbody>
+    @foreach($data as $d)
     <tr>
-      <th scope="row"></th>
-      <td></td>
-      <td></td>
+      <th scope="row">{{$d->id}}</th>
+      <td>{{$d->name}}</td>
+      <td>{{$d->price}}</td>
       <td>
-          <a href="" class="btn btn-primary">Edit</a>
-          <a href="" class="btn btn-danger">Delete</a>
+          <a href="{{url('editproduct/'.$d->id)}}" class="btn btn-primary">Edit</a>
+          <a href="{{url('deleteproduct/'.$d->id)}}" class="btn btn-danger">Delete</a>
       </td>
     </tr>
+    @endforeach
   </tbody>
 </table>
             </div>
