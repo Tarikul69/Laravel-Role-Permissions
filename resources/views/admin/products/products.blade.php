@@ -7,9 +7,14 @@
             <div class="card">
                 <div class="card-header"><h2>{{ __('Nextive') }}</h2></div>
 
-                <div class="card-body">
-                     <h2>View Products</h2>
-                </div>
+                <div class="card-body row">
+                  <div class="container col">
+                    <h2>View Products</h2>
+                  </div>
+                  <div class="container col">
+                    <a href="/addproduct" class="btn btn-secondary">Add Product</a>
+                  </div>
+                 </div>
             </div>
             <div class="container">
             <table class="table">

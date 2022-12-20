@@ -24,9 +24,7 @@ class RoleController extends Controller
     public function store(Request $req)
     {
         $validate = $req->validate(['name'=>['required', 'min:3']]);
-        Role::create($validate );
-
-        //return view('admin.role.index');
+        Role::create($validate ); 
         return view('admin.role.create')->with('Success', 'New Role created Successfuly');
     }
     public function edit(Role $role, $name)
@@ -55,6 +53,11 @@ class RoleController extends Controller
     public function products()
     {
         return view('admin.products.products');
+    }
+
+    public function addproduct()
+    {
+        return view('admin.products.addproduct');
     }
 
 }

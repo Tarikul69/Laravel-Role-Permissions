@@ -37,6 +37,8 @@ Auth::routes();
     Route::get('/edit/name',[RoleController::class, 'edit']);
     Route::post('/update',[RoleController::class, 'update']);
     Route::get('/products',[RoleController::class, 'products']);
+    Route::get('/addproduct',[RoleController::class, 'addproduct']);
+
     
 
 });
