@@ -42,6 +42,7 @@ Auth::routes();
     Route::post('/updateproduct',[RoleController::class, 'updateproduct']);
     Route::get('/deleteproduct/{id}',[RoleController::class, 'deleteproduct']);
     Route::get('/editproduct/{id}',[RoleController::class, 'editproduct']);
+    
 
 
 });
